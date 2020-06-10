@@ -25,3 +25,9 @@ export default {
   }),
 };
 </script>
+
+<style>
+  * {
+    font-family: 'Times New Roman', Times, serif !important;
+  }
+</style>
