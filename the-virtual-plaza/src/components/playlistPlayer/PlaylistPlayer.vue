@@ -15,6 +15,33 @@
       <v-btn small icon @click="playNext"> 
         <v-icon>mdi-fast-forward</v-icon>
       </v-btn>
+      
+      <v-menu
+        v-model="playlistMenu"
+        :nudge-width="150"
+        offset-y
+      >
+        <template v-slot:activator="{ }">
+          <v-btn small icon @click="togglePlaylistMenu" style="margin-top:2px"> 
+            <v-icon>mdi-playlist-play</v-icon>
+          </v-btn>
+        </template>
+
+        <v-card class="px-2 py-2">
+          <span class="mx-1">Playlist:</span>
+
+          <v-radio-group class="mt-1" v-model="selectedPlaylist">
+            <v-radio
+              label="The Virtual Plaza"
+              value="default"
+            ></v-radio>
+            <v-radio
+              label="Palm Mall"
+              value="mallsoft"
+            ></v-radio>
+          </v-radio-group>
+        </v-card>
+      </v-menu>
       <v-btn small icon @click="toggleExpandedPlayer"> 
         <v-icon v-if="playerExpanded">mdi-chevron-up</v-icon>
         <v-icon v-else>mdi-chevron-down</v-icon>
@@ -38,7 +65,31 @@
       return {
         playerExpanded: false,
         playerIsPlaying: true,
-        videoTitle: ''
+        videoTitle: '',
+        playlistMenu: false,
+        selectedPlaylist: 'default'
+      }
+    },
+    watch: {
+      selectedPlaylist: function (val) {
+        if ( window.ytPlayer && window.ytPlayer.getVideoData ) {
+
+          switch(val) {
+            case "mallsoft":
+              window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nl_5CvSyoFpaDji7S0Ao1AJ', index: [Math.floor(Math.random() * 5)]})
+              break;
+            default:
+              window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nkA5xLFnrUEUbkCU_41Qkod', index: [Math.floor(Math.random() * 5)]})
+          }
+
+          
+          setTimeout( function() { 
+            window.ytPlayer.setShuffle(true); 
+            window.ytPlayer.playVideo();
+            window.ytPlayer.seekTo(0);
+            window.ytPlayer.setLoop(true);
+          }, 1000);
+        }
       }
     },
     mounted: function() {
@@ -85,6 +136,9 @@
           window.ytPlayer.playVideo();
           this.playerIsPlaying = true;
         }
+      },
+      togglePlaylistMenu: function() {
+        this.playlistMenu = !this.playlistMenu
       }
     },
     computed: {
