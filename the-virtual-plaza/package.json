@@ -1,49 +1,45 @@
 {
-  "name": "the-virtual-plaza",
-  "version": "0.1.0",
-  "private": true,
+  "name": "desktop-simulation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "node dev.js",
+    "clean": "rm -rf ./dist"
   },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vuetify": "^2.2.11",
-    "vuex": "^3.4.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chairuosen/desktop-simulation.git"
   },
+  "author": "chairuosen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chairuosen/desktop-simulate/issues"
+  },
+  "homepage": "https://github.com/chairuosen/desktop-simulate#readme",
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.4.0",
-    "@vue/cli-plugin-eslint": "~4.4.0",
-    "@vue/cli-plugin-vuex": "^4.4.1",
-    "@vue/cli-service": "~4.4.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "sass": "^1.19.0",
-    "sass-loader": "^8.0.0",
-    "vue-cli-plugin-vuetify": "~2.0.5",
-    "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.3.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-runtime": "^6.9.2",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.21.0",
+    "jquery": "^3.0.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.9",
+    "vue": "^1.0.24",
+    "vue-hot-reload-api": "^1.2.0",
+    "vue-html-loader": "^1.2.2",
+    "vue-loader": "^3.0.4",
+    "vue-style-loader": "^1.0.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
 }
