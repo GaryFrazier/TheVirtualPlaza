@@ -6,7 +6,8 @@ var path = require('path');
 var htmlOption = {
     inject: true,
     template: './public/index.html',
-    title: "The Virtual Plaza"
+    title: "The Virtual Plaza",
+    favicon: "./src/images/favicon.ico"
 }
 
 module.exports = {
