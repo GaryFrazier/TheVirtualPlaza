@@ -4,27 +4,41 @@
             <div id="playlistIFrame"></div>
         </div>
         <div class="controlContainer">
-            <button @click="playPrevious"> 
+            <button class="flex-button" @click="playPrevious"> 
                 <i class="material-icons">skip_previous</i>
             </button>
 
-            <button @click="togglePlay"> 
+            <button class="flex-button" @click="togglePlay"> 
                 <i class="material-icons" v-if="playerIsPlaying">pause</i>
                 <i class="material-icons" v-else>play_arrow</i>
             </button>
-            <button @click="playNext"> 
+            <button class="flex-button" @click="playNext"> 
                 <i class="material-icons">skip_next</i>
             </button>
-            <button @click="togglePlaylistMenu"> 
+            <button class="flex-button" @click="togglePlaylistMenu"> 
                 <i class="material-icons">playlist_play</i>
             </button>
+            
+            <div class="playlistMenuContainer">
+                <div
+                    v-if="playlistMenu"
+                    class="playlistMenuPopup"
+                >
+
+                    <span class="mx-1">Playlist:</span>
+
+                    <input type="radio" v-model="selectedPlaylist" value="default">The Virtual Plaza</input>
+                    <input type="radio" v-model="selectedPlaylist" value="mallsoft">Palm Mall</input>
+
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <style>
  .controlContainer {
-     height: 100px;
+     height: 50px;
      display: flex;
  }
 
@@ -38,6 +52,28 @@
      height: 100%;
      display: flex;
      flex-direction: column;
+     overflow: visible;
+ }
+
+ .playlistMenuContainer {
+     position: relative;
+     bottom: 0;
+ }
+
+ .playlistMenuPopup {
+     position: absolute;
+     display: flex;
+     flex-direction: column;
+     height: 200px;
+     width: 100px;
+     top: 0;
+     box-shadow: 0 0 5px;
+     left: 0;
+     background-color: white;
+ }
+
+ .flex-button {
+     flex: 1;
  }
 </style>
 
