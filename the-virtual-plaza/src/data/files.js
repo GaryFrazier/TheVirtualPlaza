@@ -61,6 +61,8 @@ module.exports = [
         name: "Radio",
         app: "playlist-player",
         icon: "",
-        options: {}
+        options: {
+            singleton: true
+        }
     }
 ];

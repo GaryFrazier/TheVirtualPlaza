@@ -4,7 +4,9 @@ var path = require('path');
 
 
 var htmlOption = {
-    title:"Desktop Simulation"
+    inject: true,
+    template: './public/index.html',
+    title: "The Virtual Plaza"
 }
 
 module.exports = {
@@ -42,8 +44,8 @@ module.exports = {
             }
         ]
     },
-    devtool:"cheap-module-source-map",
-    plugins:[
+    devtool: "cheap-module-source-map",
+    plugins: [
         new HtmlWebpackPlugin(htmlOption)
     ]
 }
