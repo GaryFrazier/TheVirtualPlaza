@@ -19,5 +19,15 @@ module.exports = [
             width:400,
             height:600,
         }
+    },
+    {
+        name: "Our Instagram",
+        app: "instagram",
+        icon: "camera",
+        options: {
+            singleton: true,
+            width:700,
+            height:600,
+        }
     }
 ];

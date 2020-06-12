@@ -33,7 +33,7 @@
                 /*margin:0 -10px; */
                 overflow: hidden;
                 word-wrap: break-word;
-                word-break: break-all;
+                word-break: break-word;
                 text-overflow: ellipsis;
                 padding-bottom:5px;
                 color: white;

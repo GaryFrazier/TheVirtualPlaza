@@ -1,6 +1,6 @@
 module.exports = {
     file:[
-        {
+        /*{
             text:"打开",
             type:"open",
             disabled:false,
@@ -33,10 +33,10 @@ module.exports = {
             callback:function (file) {
                 $event.emit('openFileProp:menu',file);
             }
-        }
+        }*/
     ],
     wallpaper:[
-        {
+        /*{
             text:"刷新",
             type:"refresh",
             disabled:false,
@@ -69,6 +69,6 @@ module.exports = {
             callback:function () {
                 $event.emit('resetFile:menu');
             }
-        }
+        }*/
     ]
 }
