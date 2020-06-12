@@ -11,6 +11,7 @@
         <br/>
         <a href="https://www.instagram.com/neon_sunset_style/" target="_blank" rel="noopener noreferrer">Instagram</a><br/>
         <a href="https://www.facebook.com/NeonSunsetStyle" target="_blank" rel="noopener noreferrer">Facebook</a><br/>
+        <a href="https://discord.gg/A8BVVHF" target="_blank" rel="noopener noreferrer">Discord</a><br/>
         <a href="https://www.youtube.com/channel/UCAAd9A1tCGb8_bTWqQXr8oQ" target="_blank" rel="noopener noreferrer">Youtube</a><br/>
         <br />
 
