@@ -7,7 +7,7 @@
 <template>
     <div class="wallpaper-section">
         <img
-                src="../images/bg2.jpg"
+                src="../images/bg.jpg"
                 class="wallpaper-section"
                 @click="emit('click:wallpaper',$event);"
                 @drop="drop($event);"

@@ -51,10 +51,15 @@
      display: flex;
  }
 
- .iFrameContainer,
  #playlistIFrame {
      width: 100%;
      height: 100%;
+ }
+
+ .iFrameContainer {
+    flex-grow: 1 !important;
+    flex: 1 !important;
+    display: flex;
  }
 
  #radioContainer {

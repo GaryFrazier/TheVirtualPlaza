@@ -1,7 +1,7 @@
 var WebpackDevServer = require("webpack-dev-server");
 var webpack = require("webpack");
 var config = require('./webpack.config.js');
-var port = process.argv[2] || 3000;
+var port = process.argv[2] || 80;
 
 [
     "webpack-dev-server/client?http://localhost:"+port,
