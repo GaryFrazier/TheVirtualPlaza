@@ -133,7 +133,7 @@
             }
         },
         components: {
-            file:require('components/file-item.vue')
+            file: require('components/file-item.vue')
         },
         ready: function () {
             var vm = this;

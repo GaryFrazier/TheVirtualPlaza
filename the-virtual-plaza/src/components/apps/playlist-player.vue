@@ -25,11 +25,20 @@
                     class="playlistMenuPopup"
                 >
 
-                    <span class="mx-1">Playlist:</span>
+                    <h4 class="mx-1">Playlist:</h4><br /> 
 
-                    <input type="radio" v-model="selectedPlaylist" value="default">The Virtual Plaza</input>
-                    <input type="radio" v-model="selectedPlaylist" value="mallsoft">Palm Mall</input>
-
+                    <div class="playlistButton">
+                        <input type="radio" v-model="selectedPlaylist" id="default" value="default"><label for="default"> The Virtual Plaza</label>
+                    </div>
+                    <div class="playlistButton">
+                        <input type="radio" v-model="selectedPlaylist" value="mallsoft"><label for="mallsoft"> Dead Mall</label>
+                    </div>
+                    <div class="playlistButton">
+                        <input type="radio" v-model="selectedPlaylist" value="futureFunk"><label for="futureFunk"> Future Funky</label>
+                    </div>
+                    <div class="playlistButton">
+                        <input type="radio" v-model="selectedPlaylist" value="void"><label for="void"> T H E ~ V O I D</label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,15 +74,24 @@
      display: flex;
      flex-direction: column;
      height: 200px;
-     width: 100px;
+     width: 200px;
      top: 0;
      box-shadow: 0 0 5px;
      left: 0;
      background-color: white;
+     padding: 12px;
  }
 
  .flex-button {
      flex: 1;
+ }
+
+ .playlistButton {
+     margin-bottom: 4px;
+ }
+
+ .playlistButton input {
+     margin-right: 4px;
  }
 </style>
 
@@ -98,10 +116,16 @@
 
                 switch(val) {
                     case "mallsoft":
-                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nl_5CvSyoFpaDji7S0Ao1AJ', index: [Math.floor(Math.random() * 5)]})
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nl_5CvSyoFpaDji7S0Ao1AJ', index: [Math.floor(Math.random() * 12)]})
+                    break;
+                    case "futureFunk":
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmeE0xzgb9FV187sYr8-SKo', index: [Math.floor(Math.random() * 12)]})
+                    break;
+                    case "void":
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmh2_sqnojj7osnkfszZCBb', index: [Math.floor(Math.random() * 12)]})
                     break;
                     default:
-                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nkA5xLFnrUEUbkCU_41Qkod', index: [Math.floor(Math.random() * 5)]})
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nkA5xLFnrUEUbkCU_41Qkod', index: [Math.floor(Math.random() * 20)]})
                 }
 
                 
@@ -158,7 +182,7 @@
             }
         },
         ready: function () {
-            var numPl = Math.floor((Math.random() * 2) + 1);
+            var numPl = Math.floor((Math.random() * 12) + 1);
             var ytPlayer = new YT.Player("playlistIFrame", {
                 height: '200',
                 width: '350',
