@@ -13,6 +13,11 @@
         <a href="https://www.facebook.com/NeonSunsetStyle" target="_blank" rel="noopener noreferrer">Facebook</a><br/>
         <a href="https://www.youtube.com/channel/UCAAd9A1tCGb8_bTWqQXr8oQ" target="_blank" rel="noopener noreferrer">Youtube</a><br/>
         <br />
+
+        <h3>Merch</h3>
+        <br/>
+        <a href="https://www.redbubble.com/people/garyfrazier95/explore?asc=u&page=1&sortOrder=top%20selling" target="_blank" rel="noopener noreferrer">Vaporwave Gear</a><br/>
+        <br />
         <h3>Any Suggestions?</h3><br />
         <p>
             Submit suggestions and bugs to <a href="mailto:garyfrazier@the-grep.com">garyfrazier@the-grep.com</a>

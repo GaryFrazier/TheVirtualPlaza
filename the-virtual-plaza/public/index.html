@@ -9,6 +9,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+          https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyD7vkIJsjLO_H4PaEbf0D1IpL7yxpflFg8",
+          authDomain: "the-virtual-plaza-2d75b.firebaseapp.com",
+          databaseURL: "https://the-virtual-plaza-2d75b.firebaseio.com",
+          projectId: "the-virtual-plaza-2d75b",
+          storageBucket: "the-virtual-plaza-2d75b.appspot.com",
+          messagingSenderId: "1016264000644",
+          appId: "1:1016264000644:web:42a052c9ed1103bc7feed1",
+          measurementId: "G-SPRS5PG95R"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
+
     <script>
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
