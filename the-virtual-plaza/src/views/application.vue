@@ -21,6 +21,7 @@
         methods: {
         },
         components: {
+            Login: require('../components/login.vue'),
             appWindow:require('components/app-window.vue')
         },
         ready: function () {

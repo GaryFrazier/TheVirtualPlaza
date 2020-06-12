@@ -64,5 +64,13 @@ module.exports = [
         options: {
             singleton: true
         }
+    },
+    {
+        name: "Chat Room",
+        app: "chat-app",
+        icon: "",
+        options: {
+            singleton: true
+        }
     }
 ];

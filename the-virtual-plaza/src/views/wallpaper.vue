@@ -1,7 +1,7 @@
 <style lang="less" rel="stylesheet/less">
     .wallpaper-section{
         height:100%;
-        background: url(../images/wallpaper.jpg) no-repeat center top !important;
+        background: url(../images/bg3.jpg) no-repeat center top !important;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
