@@ -29,5 +29,29 @@ module.exports = [
             width:700,
             height:600,
         }
+    },
+    {
+        name: "About",
+        app: "about",
+        icon: "document",
+        options: {
+            singleton: true,
+        }
+    },
+    {
+        name: "Business Inquiries",
+        app: "business",
+        icon: "document",
+        options: {
+            singleton: true,
+        }
+    },
+    {
+        name: "Support Us",
+        app: "donate",
+        icon: "donate",
+        options: {
+            singleton: true,
+        }
     }
 ];
