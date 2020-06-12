@@ -1,24 +1,21 @@
 <style lang="less" rel="stylesheet/less">
     .wallpaper-section{
         height:100%;
-        background: url(../images/bg3.jpg) no-repeat center top !important;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        width: 100%;
     }
 </style>
 <template>
     <div class="wallpaper-section">
-        <div
+        <img
+                src="../images/bg2.jpg"
                 class="wallpaper-section"
                 @click="emit('click:wallpaper',$event);"
                 @drop="drop($event);"
                 @dragover="dragover($event)"
                 @mousedown="mousedown($event)"
                 @mouseup="emit('mouseup:wallpaper',$event);"
-        >
-        </div>
+        />
+        
       
     </div>
 </template>

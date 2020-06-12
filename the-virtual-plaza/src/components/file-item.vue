@@ -36,6 +36,7 @@
                 word-break: break-all;
                 text-overflow: ellipsis;
                 padding-bottom:5px;
+                color: white;
             }
         }
     }
