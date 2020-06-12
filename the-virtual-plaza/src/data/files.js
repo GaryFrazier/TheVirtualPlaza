@@ -58,19 +58,21 @@ module.exports = [
         options: {}
     },
     {
-        name: "Radio",
+        name: "Sunset Radio",
         app: "playlist-player",
-        icon: "",
+        icon: "radio",
         options: {
             singleton: true
         }
     },
     {
-        name: "Chat Room",
+        name: "Virtual Chat",
         app: "chat-app",
-        icon: "",
+        icon: "chat",
         options: {
-            singleton: true
+            singleton: true,
+            width:400,
+            height:600,
         }
     }
 ];

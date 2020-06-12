@@ -103,7 +103,7 @@ App.prototype.close = function () {
 App.prototype.focus = function () {
     if(!this._focus){
         this._focus = true;
-        $event.emit('app:focus',this);
+        //$event.emit('app:focus',this);
     }
 }
 
