@@ -52,11 +52,12 @@
          @contextmenu="contextmenuOnFileItem($event,file)"
     >
         <div class="file-body"
-             @click="select(file)"
+             @click="file.open()"
              @dblclick="file.open()"
              @dragstart="onDragstart($event,file);"
              @dragend="onDragend();"
              draggable="true"
+             ref="fileBod"
         >
             <div class="icon {{file.icon}}">
 
@@ -107,7 +108,6 @@
         },
         components: {},
         ready: function () {
-
         }
     }
 </script>

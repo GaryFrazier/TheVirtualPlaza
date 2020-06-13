@@ -53,5 +53,13 @@ module.exports = [
         options: {
             singleton: true,
         }
+    },
+    {
+        name: "Share",
+        app: "share",
+        icon: "share",
+        options: {
+            singleton: true,
+        }
     }
 ];

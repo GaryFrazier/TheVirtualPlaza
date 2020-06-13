@@ -28,17 +28,16 @@
                     <h4 class="mx-1">Playlist:</h4><br /> 
 
                     <div class="playlistButton">
-                        <input type="radio" v-model="selectedPlaylist" id="default" value="default"><label for="default"> The Virtual Plaza</label>
+                        <label for="default"><input type="radio" v-model="selectedPlaylist" id="default" value="default">The Virtual Plaza</label>
                     </div>
                     <div class="playlistButton">
-                        <input type="radio" v-model="selectedPlaylist" value="mallsoft"><label for="mallsoft"> Dead Mall</label>
+                        <label for="mallsoft"><input type="radio" v-model="selectedPlaylist" id="mallsoft" value="mallsoft">Dead Mall</label>
                     </div>
                     <div class="playlistButton">
-                        <input type="radio" v-model="selectedPlaylist" value="futureFunk"><label for="futureFunk"> Future Funky</label>
+                        <label for="futureFunk"><input type="radio" v-model="selectedPlaylist" id="futureFunk" value="futureFunk">Future Funky</label>
                     </div>
                     <div class="playlistButton">
-                        <input type="radio" v-model="selectedPlaylist" value="void"><label for="void"> T H E ~ V O I D</label>
-                    </div>
+                        <label for="void"><input type="radio" v-model="selectedPlaylist" id="void" value="void">T H E ~ V O I D</label>
                 </div>
             </div>
         </div>
@@ -80,9 +79,9 @@
      flex-direction: column;
      height: 200px;
      width: 200px;
-     top: 0;
+     top: -200px;
      box-shadow: 0 0 5px;
-     left: 0;
+     left: -200px;
      background-color: white;
      padding: 12px;
  }
@@ -133,12 +132,14 @@
                     window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nkA5xLFnrUEUbkCU_41Qkod', index: [Math.floor(Math.random() * 20)]})
                 }
 
-                
+                var self = this
                 setTimeout( function() { 
                     window.ytPlayer.setShuffle(true); 
                     window.ytPlayer.playVideo();
                     window.ytPlayer.seekTo(0);
                     window.ytPlayer.setLoop(true);
+                    self.playerIsPlaying = true;
+                    self.playlistMenu = false;
                 }, 1000);
                 }
             }
@@ -198,7 +199,8 @@
                     autoplay: 1,
                     loop: 1,
                     enablejsapi: 1,
-                    start: 0
+                    start: 0,
+                    playsinline: 1
                 },
                 events: {
                     'onReady': function (event) {

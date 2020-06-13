@@ -2,6 +2,9 @@
     .wallpaper-section{
         height:100%;
         width: 100%;
+        min-width: 1200px;;
+        margin-left: 50%;
+        transform: translateX(-50%);
     }
 </style>
 <template>

@@ -1,11 +1,11 @@
-var webpack = require('webpack');
+var webpack  = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 
 
 var htmlOption = {
     inject: true,
-    template: './public/index.html',
+    template: "./public/index.html",
     title: "The Virtual Plaza",
     favicon: "./src/images/favicon.ico"
 }
@@ -30,14 +30,17 @@ module.exports = {
             },
             {
                 test: /\.html$/,
+                exclude: /node_modules/,
                 loader: "html"
             },
             {
                 test: /\.vue$/,
+                exclude: /node_modules/,
                 loader: "vue"
             },
             {
                 test: /\.(png|jpg|ico)$/,
+                exclude: /node_modules/,
                 loader: 'url-loader?limit=8192',
                 options: {
                     publicPath: '/'
