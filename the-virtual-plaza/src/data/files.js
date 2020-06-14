@@ -33,7 +33,7 @@ module.exports = [
     {
         name: "About",
         app: "about",
-        icon: "document",
+        icon: "about",
         options: {
             singleton: true,
         }
@@ -41,7 +41,7 @@ module.exports = [
     {
         name: "Business Inquiries",
         app: "business",
-        icon: "document",
+        icon: "business",
         options: {
             singleton: true,
         }

@@ -26,8 +26,8 @@
 
     var option = {
         cell:{
-            height:130,
-            width:130
+            height:100,
+            width:100
         }
     };
     var maxRow = Math.floor(window._h/option.cell.height);

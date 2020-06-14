@@ -21,10 +21,10 @@
             transform:translateX(-50%) translateY(-50%);
             width:90px;
             .icon{
-                height:80px;
+                height:50px;
                 width:100%;
                 margin:0 auto;
-                background-size:64px;
+                background-size:42px;
             }
             .text{
                 min-height:20px;
