@@ -4,8 +4,8 @@
     .taskbar-section{
         width:100%;
         height:@h;
-        background:#f28db3;
-        opacity: 0.8;
+        background:#BBB;
+
         position:absolute;
         bottom:0;
         top:auto !important;
@@ -27,7 +27,7 @@
 
             /*color:#fff;*/
             /*background:#ccc;*/
-            color:#aaa;
+            color:#888;
             .Filter(saturate(0.2));
 
             &.actived{
