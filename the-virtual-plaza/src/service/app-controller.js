@@ -28,16 +28,14 @@ var _this = {
         this.apps.sort(function (a,b) {
             if(a===app){
                 b.blur();
-                return 1;
             }else if(b===app){
                 a.blur();
-                return -1;
             }else{
                 a.blur();
                 b.blur();
-                return 0;
             }
 
+            return 0;
         });
     },
     checkClose:function () {

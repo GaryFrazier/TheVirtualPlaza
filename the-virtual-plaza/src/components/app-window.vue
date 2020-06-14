@@ -232,7 +232,8 @@
                 top:app.top+'px',
                 left:app.left+'px',
                 width:app.width+'px',
-                height:app.height+30+'px'
+                height:app.height+30+'px',
+                zIndex:app.zIndex
                 }"
 
             @mousedown="appWindowMousedown(app,$event)"

@@ -10,6 +10,7 @@ function App(o) {
         title: "app",
         icon:"",
         _focus: false,
+        zIndex: null,
         titleHeight:30,
         type: null,
         top: null,
@@ -103,11 +104,13 @@ App.prototype.close = function () {
 App.prototype.focus = function () {
     if(!this._focus){
         this._focus = true;
-        //$event.emit('app:focus',this);
+        this.zIndex = 999;
+        $event.emit('app:focus',this);
     }
 }
 
 App.prototype.blur = function () {
+    this.zIndex = 1;
     this._focus = false;
 };
 
