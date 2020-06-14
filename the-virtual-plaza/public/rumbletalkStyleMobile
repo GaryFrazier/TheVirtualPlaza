@@ -1,0 +1,12 @@
+
+.top-bar, #top-bar-right, #top-bar-left, #bottom, button, button:hover {
+	background-color: #f28db3;
+}
+
+#list > div:not(.admin) .user-image,
+.main-message-container:not(.admin) .message-user-image {
+  width: 0 !important;
+  padding-right: 32px;
+  background-image: url("https://d1pfint8izqszg.cloudfront.net/images/skins/40000/usericon.png");
+  background-repeat: no-repeat;
+}
