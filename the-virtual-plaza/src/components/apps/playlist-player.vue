@@ -37,6 +37,9 @@
                         <label for="futureFunk"><input type="radio" v-model="selectedPlaylist" id="futureFunk" value="futureFunk">Future Funky</label>
                     </div>
                     <div class="playlistButton">
+                        <label for="synthwave"><input type="radio" v-model="selectedPlaylist" id="synthwave" value="synthwave">Neon Highway</label>
+                    </div>
+                    <div class="playlistButton">
                         <label for="void"><input type="radio" v-model="selectedPlaylist" id="void" value="void">T H E ~ V O I D</label>
                 </div>
             </div>
@@ -120,16 +123,19 @@
 
                 switch(val) {
                     case "mallsoft":
-                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nl_5CvSyoFpaDji7S0Ao1AJ', index: [Math.floor(Math.random() * 12)]})
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nl_5CvSyoFpaDji7S0Ao1AJ', index: [Math.floor(Math.random() * 20)]})
                     break;
                     case "futureFunk":
-                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmeE0xzgb9FV187sYr8-SKo', index: [Math.floor(Math.random() * 12)]})
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmeE0xzgb9FV187sYr8-SKo', index: [Math.floor(Math.random() * 20)]})
                     break;
                     case "void":
                     window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmh2_sqnojj7osnkfszZCBb', index: [Math.floor(Math.random() * 12)]})
                     break;
+                    case "synthwave":
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmjrvZ1gQYzBa9MB_B5TMMq', index: [Math.floor(Math.random() * 15)]})
+                    break;
                     default:
-                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nkA5xLFnrUEUbkCU_41Qkod', index: [Math.floor(Math.random() * 20)]})
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nkA5xLFnrUEUbkCU_41Qkod', index: [Math.floor(Math.random() * 30)]})
                 }
 
                 var self = this

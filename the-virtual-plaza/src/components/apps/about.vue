@@ -3,7 +3,7 @@
         <h3>About Us</h3>
         <br />
         <p>
-            The Virtual Plaza was concieved to provide a hangout for fellow vaporwave enthusiasts. art and music curated by Neon Sunset Style,
+            The Virtual Plaza was conceived to provide a hangout for fellow vaporwave enthusiasts. art and music curated by Neon Sunset Style,
             The Virtual Plaza serves to expand your tastes and fully embrace vaporwave culture.
         </p>
         <br />
