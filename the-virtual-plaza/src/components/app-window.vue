@@ -10,24 +10,27 @@
         &.animating{
             transition: all ease 0.5s;
         }
+        .app-title-text {
+            margin-left: 4px;
+        }
+        .text-icon-holder {
+            display:flex;
+            align-items: center;
+            margin-left: 4px;
+        }
         .app-title{
             position:relative;
-            background:#F2F6FF;
+            background:#7d7d7d;
             text-align:center;
             line-height:@titleHeight;
-            height:@titleHeight;
+            height:34px;
             cursor: default;
-            color:#aaa;
+            border: 2px solid #CCC;
+            color:#CCC;
             .Filter(saturate(0.5));
             .icon{
                 position:absolute;
-                top:4px;
-                left:5px;
-
-                /*display: inline-block;*/
-                /*vertical-align: top;*/
-                /*position:relative;*/
-                /*top:5px;*/
+                position:relative;
 
                 height:18px;
                 width:18px;
@@ -38,8 +41,8 @@
         &.focus{
             box-shadow:0 10px 35px rgba(0, 0, 0, 0.6);
             .app-title{
-                background:#F5F8FF;
-                color:#333;
+                background:#06167a;
+                color:#FFF;
                 .Filter(saturate(1.2));
             }
         }
@@ -90,10 +93,9 @@
                 height:@titleHeight - 2*@margin;
                 margin:@margin @margin 0 0;
                 float:left;
-                border-radius:3px;
             }
             .c1{
-                background:#81C2D0;
+                background:#BBB;
                 &:before{
                     box-sizing:border-box;
                     @w:12px;
@@ -105,11 +107,11 @@
                     width:@w;
                     left:  ( @titleHeight - 2*@margin - @w ) /2;
                     bottom: ( ( @titleHeight - 2*@margin - @h ) /2 ) - 4px;
-                    background:#fff;
+                    background:black;
                 }
             }
             .c2{
-                background:#659A65;
+                background:#BBB;
                 &:before{
                     box-sizing:border-box;
                     @w:12px;
@@ -121,7 +123,7 @@
                     width:@w;
                     left:  ( @titleHeight - 2*@margin - @w ) /2;
                     top: ( @titleHeight - 2*@margin - @w ) /2;
-                    border:@b solid #fff;
+                    border:@b solid black;
                     border-top-width:2*@b;
                 }
             }
@@ -141,13 +143,14 @@
                     width:@w;
                     left:  ( @titleHeight - 2*@margin - @w ) /2;
                     top: ( @titleHeight - 2*@margin - @h ) /2;
-                    background:#fff;
                     .Rotate(45deg);
+                    background: black;
                 }
                 &:after{
                     .Rotate(-45deg);
+                    
                 }
-                background:#D26262;
+                background:#BBB;
             }
         }
         @reactionWidth:4px;
@@ -243,10 +246,12 @@
                 @mousedown.self="titleMousedown(app,$event)"
                 @mouseup="mouseup()"
         >
-            <div class="icon {{app.icon}}">
+            <div class="text-icon-holder"  @mousedown.self="titleMousedown(app,$event)" @mouseup="mouseup()">
+                <div class="icon {{app.icon}}"  @mousedown.self="titleMousedown(app,$event)" @mouseup="mouseup()">
 
+                </div>
+                <span class="app-title-text" @mousedown.self="titleMousedown(app,$event)" @mouseup="mouseup()">{{app.title}}</span>
             </div>
-            {{app.title}}
             <div class="app-control">
                 <span class="c c1" @mousedown="hideApp(app)"></span>
                 <span class="c c2" v-show="app.resizable" @mousedown="app.resizable && maxApp(app)"></span>
