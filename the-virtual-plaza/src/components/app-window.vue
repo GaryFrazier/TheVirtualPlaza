@@ -10,6 +10,9 @@
         &.animating{
             transition: all ease 0.5s;
         }
+        .app-body {
+            background: white;
+        }
         .app-title-text {
             margin-left: 4px;
         }
@@ -63,7 +66,7 @@
                     width:@w;
                     left:  ( @titleHeight - 2*@margin - @w ) /2 - @diff + @left;
                     top: ( @titleHeight - 2*@margin - @w ) /2 + @diff + @top;
-                    border:@b solid #fff;
+                    border:@b solid black;
                     border-top-width:2*@b;
                 }
                 &:after{
@@ -75,7 +78,7 @@
                     width:@w;
                     left:  ( @titleHeight - 2*@margin - @w ) /2  + @diff + @left;
                     top: ( @titleHeight - 2*@margin - @w ) /2  - @diff + @top;
-                    border:@b solid #fff;
+                    border:@b solid black;
                     border-top-width:2*@b;
                 }
             }
