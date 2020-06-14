@@ -31,6 +31,14 @@ module.exports = [
         }
     },
     {
+        name: "Wallpaper",
+        app: "wallpaper",
+        icon: "wallpaper",
+        options: {
+            singleton: true,
+        }
+    },
+    {
         name: "About",
         app: "about",
         icon: "about",
@@ -47,19 +55,20 @@ module.exports = [
         }
     },
     {
-        name: "Support Us",
-        app: "donate",
-        icon: "donate",
-        options: {
-            singleton: true,
-        }
-    },
-    {
         name: "Share",
         app: "share",
         icon: "share",
         options: {
             singleton: true,
         }
+    },
+    {
+        name: "Support Us",
+        app: "donate",
+        icon: "donate",
+        options: {
+            singleton: true,
+        }
     }
+    
 ];

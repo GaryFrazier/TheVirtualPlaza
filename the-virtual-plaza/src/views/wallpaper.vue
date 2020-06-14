@@ -10,7 +10,7 @@
 <template>
     <div class="wallpaper-section">
         <img
-                src="../images/bg.jpg"
+                :src="getImgUrl"
                 class="wallpaper-section"
                 @click="emit('click:wallpaper',$event);"
                 @drop="drop($event);"
@@ -24,9 +24,13 @@
 </template>
 
 <script>
+    var storage = require('service/storage');
+
     module.exports = {
         data: function () {
-            return {}
+            return {
+                wallpaper: storage.get('wallpaper') || "default.jpg"
+            }
         },
         methods: {
             emit:function (name,e) {
@@ -49,11 +53,22 @@
                 }
             }
         },
+        computed: {
+            getImgUrl() {
+                var images = require.context('../images/wallpaper/', false, /\.(png|jpg|ico)$/)
+                return images('./' + this.wallpaper)
+            }
+        },
         components: {},
         ready: function () {
             $(window).on('contextmenu',function (e) {
                 e.preventDefault();
             })
+
+            var self = this
+            setInterval(function() {
+                self.wallpaper = storage.get('wallpaper') || "default.jpg";
+            }, 1000)
         }
     }
 </script>
