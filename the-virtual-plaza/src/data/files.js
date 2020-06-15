@@ -8,6 +8,16 @@ module.exports = [
         }
     },
     {
+        name: "Watch Party",
+        app: "watch-room",
+        icon: "watchParty",
+        options: {
+            singleton: true,
+            width:600,
+            height:800,
+        }
+    },
+    {
         name: "Virtual Chat",
         app: "chat-app",
         icon: "chat",
