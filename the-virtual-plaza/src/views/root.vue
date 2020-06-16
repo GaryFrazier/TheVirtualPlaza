@@ -9,6 +9,7 @@
         <application class="scope" :apps.sync="apps"></application>
         <taskbar class="scope" :apps.sync="apps"></taskbar>
         <mousemenu class="scope"></mousemenu>
+        <links class="scope"></links>
     </div>
 </template>
 
@@ -34,7 +35,8 @@
             selection:require('views/selection.vue'),
             application:require('views/application.vue'),
             taskbar:require('views/taskbar.vue'),
-            mousemenu:require('views/mouse-menu.vue')
+            mousemenu:require('views/mouse-menu.vue'),
+            links:require('../components/general/links.vue')
         },
         ready:function () {
             var vm = this;
