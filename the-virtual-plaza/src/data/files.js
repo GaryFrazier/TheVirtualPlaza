@@ -31,6 +31,19 @@ module.exports = [
         }
     },
     {
+        name: "Paint",
+        app: "paint",
+        icon: "paint",
+        options: {
+            data: {
+
+            },
+            singleton: true,
+            width:600,
+            height:600,
+        }
+    },
+    {
         name: "Our Instagram",
         app: "instagram",
         icon: "camera",
@@ -49,7 +62,7 @@ module.exports = [
         }
     },
     {
-        name: "About",
+        name: "Follow Us",
         app: "about",
         icon: "about",
         options: {
