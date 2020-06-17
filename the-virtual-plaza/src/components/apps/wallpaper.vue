@@ -124,12 +124,12 @@
                     self.selectedWallpaper = self.animatedWallpapers[0].value
                 } else {
                     var i = self.animatedWallpapers.indexOf(current) - 1
-                    if (i < 0) {
+                    if (i >= 0) {
                         storage.set('wallpaper', self.animatedWallpapers[i].value)
                         self.selectedWallpaper = self.animatedWallpapers[i].value
                     } else {
-                        storage.set('wallpaper', self.animatedWallpapers[0].value)
-                        self.selectedWallpaper = self.animatedWallpapers[0].value
+                        storage.set('wallpaper', self.animatedWallpapers[self.animatedWallpapers.length - 1].value)
+                        self.selectedWallpaper = self.animatedWallpapers[self.animatedWallpapers.length - 1].value
                     }
                 }
             },
