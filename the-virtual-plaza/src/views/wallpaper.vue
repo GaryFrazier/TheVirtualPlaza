@@ -45,7 +45,9 @@
     module.exports = {
         data: function () {
             return {
-                wallpaper: storage.get('wallpaper') || "https://media.giphy.com/media/j5zqQSABpeHCU8EpO3/giphy.gif"
+                wallpaper: storage.get('wallpaper') || "https://media.giphy.com/media/j5zqQSABpeHCU8EpO3/giphy.gif",
+                animatedWallpapers: require('../data/wallpapers.js'),
+                rotateWallpaper: storage.get('rotateWallpaper') || true,
             }
         },
         methods: {
@@ -66,6 +68,23 @@
                     $event.emit('contextmenu:wallpaper',{x:e.clientX,y:e.clientY})
                 }else if(e.button==0){
                     $event.emit('mousedown:wallpaper',{x:e.clientX,y:e.clientY})
+                }
+            },
+            rotateWallpaperFunc: function() {
+                var self = this
+                
+                if (self.rotateWallpaper) {
+                    var current = self.animatedWallpapers.find(x => x.value === self.wallpaper)
+                    if (!current) {
+                        storage.set('wallpaper', self.animatedWallpapers[0].value)
+                    } else {
+                        var i = self.animatedWallpapers.indexOf(current) + 1
+                        if (i < self.animatedWallpapers.length) {
+                            storage.set('wallpaper', self.animatedWallpapers[i].value)
+                        } else {
+                            storage.set('wallpaper', self.animatedWallpapers[0].value)
+                        }
+                    }
                 }
             }
         },
@@ -93,6 +112,18 @@
             setInterval(function() {
                 self.wallpaper = storage.get('wallpaper') || "https://media.giphy.com/media/j5zqQSABpeHCU8EpO3/giphy.gif";
             }, 1000)
+            setInterval(function() {
+                var rotateWallpaperVar = storage.get('rotateWallpaper')
+                if (rotateWallpaperVar === false) {
+                    self.rotateWallpaper = false
+                } else {
+                    self.rotateWallpaper = true
+                }
+                
+            }, 1000)
+            setInterval(function() {
+                self.rotateWallpaperFunc()
+            }, 60000)
         }
     }
 </script>
