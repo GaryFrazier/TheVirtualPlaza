@@ -1,6 +1,7 @@
 <template>
     <div id="linksContainer">
-        <a class="discordButton linkButton" target="_blank" href="https://discord.com/invite/A8BVVHF">Join Our Discord!</a>
+        <a class="linkButton" target="_blank" href="https://www.redbubble.com/people/garyfrazier95/shop?asc=u">Merch!</a>
+        <a class="linkButton" target="_blank" href="https://discord.com/invite/A8BVVHF">Join Our Discord!</a>
     </div>
 </template>
 
@@ -14,6 +15,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        flex-wrap: wrap;
     }
     
     .linkButton {
@@ -27,6 +29,10 @@
             padding: 4px 10px;
             display: block;
             position: relative;
+            margin: 4px;
+            flex: 1;
+            text-align: center;
+            max-width: 150px;
     }
 </style>
 

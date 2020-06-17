@@ -6,9 +6,24 @@
         margin-left: 50%;
         transform: translateX(-50%);
     }
+
+    .giphyLink {
+            position: fixed;
+            z-index: 999;
+            right: 0;
+            color: white;
+            margin-right: 60px;
+    }
+
+    .giphyLink a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+    }
 </style>
 <template>
     <div class="wallpaper-section">
+        <p v-if="getImgUrl.indexOf('.gif') !== -1" class="giphyLink"><a target="_blank" :href="'https://giphy.com/gifs/' + getGifId">via GIPHY</a></p>
         <img
                 :src="getImgUrl"
                 class="wallpaper-section"
@@ -18,6 +33,7 @@
                 @mousedown="mousedown($event)"
                 @mouseup="emit('mouseup:wallpaper',$event);"
         />
+       
         
       
     </div>
@@ -29,7 +45,7 @@
     module.exports = {
         data: function () {
             return {
-                wallpaper: storage.get('wallpaper') || "default.jpg"
+                wallpaper: storage.get('wallpaper') || "https://media.giphy.com/media/j5zqQSABpeHCU8EpO3/giphy.gif"
             }
         },
         methods: {
@@ -55,8 +71,16 @@
         },
         computed: {
             getImgUrl() {
+                if (this.wallpaper.indexOf('.gif') !== -1) {
+                    return this.wallpaper
+                }
+                
                 var images = require.context('../images/wallpaper/', false, /\.(png|jpg|ico)$/)
                 return images('./' + this.wallpaper)
+            },
+            getGifId() {
+                const regex = /media\/(.*)\/giphy/gm
+                return regex.exec(this.getImgUrl)[1];
             }
         },
         components: {},
@@ -67,7 +91,7 @@
 
             var self = this
             setInterval(function() {
-                self.wallpaper = storage.get('wallpaper') || "default.jpg";
+                self.wallpaper = storage.get('wallpaper') || "https://media.giphy.com/media/j5zqQSABpeHCU8EpO3/giphy.gif";
             }, 1000)
         }
     }

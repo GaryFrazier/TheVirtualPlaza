@@ -10,6 +10,7 @@
         bottom:0;
         top:auto !important;
         left:0;
+        opacity: 0.8;
     }
     .app-list{
         overflow:hidden;

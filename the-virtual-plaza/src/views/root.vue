@@ -10,6 +10,7 @@
         <taskbar class="scope" :apps.sync="apps"></taskbar>
         <mousemenu class="scope"></mousemenu>
         <links class="scope"></links>
+     
     </div>
 </template>
 
@@ -36,7 +37,8 @@
             application:require('views/application.vue'),
             taskbar:require('views/taskbar.vue'),
             mousemenu:require('views/mouse-menu.vue'),
-            links:require('../components/general/links.vue')
+            links:require('../components/general/links.vue'),
+            counter:require('../components/general/counter.vue')
         },
         ready:function () {
             var vm = this;

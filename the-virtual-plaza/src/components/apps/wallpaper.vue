@@ -1,16 +1,22 @@
 <template>
     <div id="wallpaperContainer">
-        <h3>Choose a wallpaper!</h3><br/>
-        <p>
-            Unfortunately liscencing for wallpapers is expensive, consider donating to help fund the servers and purchase more wallpapers!
-            Contact us at <a href="mailto:garyfrazier@the-grep.com">garyfrazier@the-grep.com</a> If you wish to personally fund a specific wallpaper.
-        </p>
+        <h2>Choose a wallpaper!</h2>
         <br />
-        <div class="wallpaperButton">
-            <label for="default"><input type="radio" v-model="selectedWallpaper" id="default" value="default.jpg">The Virtual Plaza</label>
+        <h3>static</h3>
+        <div class="indented">
+            <div class="wallpaperButton">
+                <label for="default"><input type="radio" v-model="selectedWallpaper" id="default" value="default.jpg">The Virtual Plaza</label>
+            </div>
+            <div class="wallpaperButton">
+                <label for="islander"><input type="radio" v-model="selectedWallpaper" id="islander" value="islander.png">Islander</label>
+            </div>
         </div>
-        <div class="wallpaperButton">
-            <label for="islander"><input type="radio" v-model="selectedWallpaper" id="islander" value="islander.png">Islander</label>
+        <br />
+        <h3>Animated</h3>
+        <div class="indented">
+            <div class="wallpaperButton">
+                <label for="lofi"><input type="radio" v-model="selectedWallpaper" id="lofi" value="https://media.giphy.com/media/j5zqQSABpeHCU8EpO3/giphy.gif">Warm Night</label>
+            </div>
         </div>
     </div>
 </template>
@@ -21,6 +27,18 @@
         height: 100%;
         padding: 12px;
         overflow-y: scroll;
+    }
+    
+    .indented {
+        margin-left: 20px;
+    }
+
+    .indented input {
+        margin-right: 12px;
+    }
+
+    .wallpaperButton {
+        margin: 10px 0;
     }
 </style>
 
@@ -56,7 +74,7 @@
             if (wallpaper) {
                 this.selectedWallpaper = wallpaper;
             } else {
-                this.selectedWallpaper = "default.jpg";
+                this.selectedWallpaper = "https://media.giphy.com/media/j5zqQSABpeHCU8EpO3/giphy.gif";
             }
             
         }
