@@ -108,6 +108,19 @@
         },
         components: {},
         ready: function () {
+            if (this.file.app === 'playlist-player') {
+                setTimeout(() => {
+                    this.file.open()
+                }, 1000)
+                
+            }
+
+            if (this.file.app === 'chat-app') {
+                setTimeout(() => {
+                    this.file.open()
+                }, 1000)
+                
+            }
         }
     }
 </script>
