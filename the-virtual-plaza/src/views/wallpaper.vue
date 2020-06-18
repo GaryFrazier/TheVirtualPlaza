@@ -5,6 +5,7 @@
         min-width: 1200px;;
         margin-left: 50%;
         transform: translateX(-50%);
+        pointer-events: none;
     }
 
     .giphyLink {

@@ -1,7 +1,8 @@
 <template>
     <div id="chatContainer" class="chatContainer">
         <!--<div id="rt-e08c1cbc5b3d5c1d26b15d59db6d3860"></div> -->
-        <iframe class="chat-embed" src="https://titanembeds.com/embed/696015287253729372?defaultchannel=696015287887331380&scrollbartheme=light&theme=IceWyvern&userscalable=false" frameborder="0"></iframe>
+        <iframe class="chat-embed" src="https://titanembeds.com/embed/696015287253729372?css=128&defaultchannel=696015287887331380&scrollbartheme=light&theme=IceWyvern&userscalable=false" frameborder="0"></iframe>
+
     </div>
 </template>
 
