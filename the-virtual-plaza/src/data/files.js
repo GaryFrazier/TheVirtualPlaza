@@ -8,16 +8,6 @@ module.exports = [
         }
     },
     {
-        name: "Watch Party",
-        app: "watch-room",
-        icon: "watchParty",
-        options: {
-            singleton: true,
-            width:600,
-            height:800,
-        }
-    },
-    {
         name: "Virtual Chat",
         app: "chat-app",
         icon: "chat",
@@ -31,6 +21,27 @@ module.exports = [
         }
     },
     {
+        name: "Our Instagram",
+        app: "instagram",
+        icon: "camera",
+        options: {
+            singleton: true,
+            width:700,
+            height:600,
+        }
+    },
+    {
+        name: "Watch Party",
+        app: "watch-room",
+        icon: "watchParty",
+        options: {
+            singleton: true,
+            width:600,
+            height:800,
+        }
+    },
+
+    {
         name: "Paint",
         app: "paint",
         icon: "paint",
@@ -43,16 +54,7 @@ module.exports = [
             height:600,
         }
     },
-    {
-        name: "Our Instagram",
-        app: "instagram",
-        icon: "camera",
-        options: {
-            singleton: true,
-            width:700,
-            height:600,
-        }
-    },
+    
     {
         name: "Wallpaper",
         app: "wallpaper",

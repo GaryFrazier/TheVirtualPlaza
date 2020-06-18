@@ -41,7 +41,7 @@ module.exports = {
             {
                 test: /\.(png|jpg|ico)$/,
                 exclude: /node_modules/,
-                loader: 'url-loader?limit=8192',
+                loader: 'file-loader?name=/img/[name].[ext]',
                 options: {
                     publicPath: '/'
                 }
