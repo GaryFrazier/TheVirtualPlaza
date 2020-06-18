@@ -14,6 +14,7 @@
             right: 0;
             color: white;
             margin-right: 60px;
+            pointer-events: all;
     }
 
     .giphyLink a {
