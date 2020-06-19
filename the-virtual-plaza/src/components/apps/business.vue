@@ -2,7 +2,7 @@
     <div id="businessAppContainer">
         <h3>Business Inquiries</h3><br/>
         <p>
-            Do you want your instagram page or youtube playlist featured on the virtual plaza?
+            Do you want your own custom advertisement on the virtual plaza?
             Contact us at <a href="mailto:garyfrazier@the-grep.com">garyfrazier@the-grep.com</a>
         </p>
     </div>
