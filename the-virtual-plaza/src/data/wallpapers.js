@@ -12,5 +12,6 @@ module.exports = [
     {id: 'id11', value: 'https://media.giphy.com/media/1zgzISaYrnMAYRJJEr/giphy.gif', name: 'Rainfall'},
     {id: 'id12', value: 'https://media.giphy.com/media/3ohzdKy5Z8TChSDuiA/giphy.gif', name: 'Totoro'},
     {id: 'id13', value: 'https://media.giphy.com/media/yceDWMt6qiAiB4ZVqR/giphy.gif', name: 'Summer Palm'},
-    {id: 'id14', value: 'https://media.giphy.com/media/PaiSRhsKUCkUg/giphy.gif', name: 'Dragonball'}
+    {id: 'id14', value: 'https://media.giphy.com/media/PaiSRhsKUCkUg/giphy.gif', name: 'Dragonball'},
+    {id: 'id15', value: 'https://media.giphy.com/media/XephCR1PM8j9FG8GO7/giphy.gif', name: 'Dead Mall 1'}
 ]
