@@ -2,10 +2,13 @@
     .wallpaper-section{
         height:100%;
         width: 100%;
-        min-width: 1200px;;
         margin-left: 50%;
         transform: translateX(-50%);
         pointer-events: none;
+    }
+
+    .wallpaperImg {
+        min-width: 1200px;
     }
 
     .giphyLink {
@@ -13,7 +16,7 @@
             z-index: 999;
             right: 0;
             color: white;
-            margin-right: 60px;
+            margin-right: 20px;
             pointer-events: all;
     }
 
@@ -28,7 +31,7 @@
         <p v-if="getImgUrl.indexOf('.gif') !== -1" class="giphyLink"><a target="_blank" :href="'https://giphy.com/gifs/' + getGifId">via GIPHY</a></p>
         <img
                 :src="getImgUrl"
-                class="wallpaper-section"
+                class="wallpaper-section wallpaperImg"
                 @click="emit('click:wallpaper',$event);"
                 @drop="drop($event);"
                 @dragover="dragover($event)"
