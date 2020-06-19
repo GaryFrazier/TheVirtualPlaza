@@ -7,9 +7,9 @@
         pointer-events: none;
     }
 
-    .wallpaperImg {
-        min-width: 1200px;
-    }
+    //.wallpaperImg {
+        //min-width: 1200px;
+    //}
 
     .giphyLink {
             position: fixed;
