@@ -13,5 +13,8 @@ module.exports = [
     {id: 'id12', value: 'https://media.giphy.com/media/3ohzdKy5Z8TChSDuiA/giphy.gif', name: 'Totoro'},
     {id: 'id13', value: 'https://media.giphy.com/media/yceDWMt6qiAiB4ZVqR/giphy.gif', name: 'Summer Palm'},
     {id: 'id14', value: 'https://media.giphy.com/media/PaiSRhsKUCkUg/giphy.gif', name: 'Dragonball'},
-    {id: 'id15', value: 'https://media.giphy.com/media/iCjrqMjQlZAYXPKuwG/giphy.gif', name: 'Dead Mall 1'}
+    {id: 'id15', value: 'https://media.giphy.com/media/IeRenEpgsEb2olWkmp/giphy.gif', name: 'Mall Palms'},
+    {id: 'id16', value: 'https://media.giphy.com/media/iCjrqMjQlZAYXPKuwG/giphy.gif', name: 'Dead Mall 1'},
+    {id: 'id17', value: ' https://media.giphy.com/media/QXUAkmL97YvFLzzt3E/giphy.gif', name: 'Mall Fountain'}
+   
 ]
