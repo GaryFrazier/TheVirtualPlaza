@@ -1,6 +1,6 @@
 <template>
-    <div :id="'instagramContainer' +  powrId" class="instagramContainer">
-        <div class="powr-instagram-feed" :id="powrId"></div><script src="https://www.powr.io/powr.js?platform=vuejs"></script>
+    <div class="instagramContainer">
+        <iframe src="//lightwidget.com/widgets/ab6d5046b80b5d9a9dfbe37af01291d2.html" scrolling="no" allowtransparency="true" class="lightwidget-widget instagramIframe" style="width:100%;border:0;overflow:hidden;"></iframe>
     </div>
 </template>
 
@@ -9,6 +9,11 @@
         width: 100%;
         height: 100%;
         overflow-y: scroll;
+    }
+
+    .instagramIframe {
+        width: 100%;
+        height: 100%;
     }
 </style>
 
@@ -22,7 +27,7 @@
         name: 'InstagramApp',
         data: function() {
             return {
-                powrId: 'fc9a9512_1591970277'
+        
             }
         },
 
@@ -30,10 +35,6 @@
 
         },
         ready: function () {
-            let instagramScript = document.createElement('script')
-            instagramScript.setAttribute('src', 'https://www.powr.io/powr.js?platform=vuejs')
-            
-            document.getElementById("instagramContainer" +  this.powrId).appendChild(instagramScript)
         }
     }
 </script>

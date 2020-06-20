@@ -21,7 +21,7 @@ module.exports = [
         }
     },
     {
-        name: "Our Instagram",
+        name: "Gallery",
         app: "instagram",
         icon: "camera",
         options: {
