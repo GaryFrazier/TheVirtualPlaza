@@ -40,6 +40,12 @@
                         <label for="synthwave"><input type="radio" v-model="selectedPlaylist" id="synthwave" value="synthwave">Neon Highway</label>
                     </div>
                     <div class="playlistButton">
+                        <label for="vaporTrap"><input type="radio" v-model="selectedPlaylist" id="vaporTrap" value="vaporTrap">Vapor Trap</label>
+                    </div>
+                    <div class="playlistButton">
+                        <label for="albums"><input type="radio" v-model="selectedPlaylist" id="albums" value="albums">Albums / Mixes</label>
+                    </div>
+                    <div class="playlistButton">
                         <label for="void"><input type="radio" v-model="selectedPlaylist" id="void" value="void">T H E ~ V O I D</label>
                 </div>
             </div>
@@ -123,19 +129,25 @@
 
                 switch(val) {
                     case "mallsoft":
-                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nl_5CvSyoFpaDji7S0Ao1AJ', index: [Math.floor(Math.random() * 20)]})
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nl_5CvSyoFpaDji7S0Ao1AJ', index: [Math.floor(Math.random() * 30)]})
                     break;
                     case "futureFunk":
-                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmeE0xzgb9FV187sYr8-SKo', index: [Math.floor(Math.random() * 20)]})
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmeE0xzgb9FV187sYr8-SKo', index: [Math.floor(Math.random() * 29)]})
                     break;
                     case "void":
                     window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmh2_sqnojj7osnkfszZCBb', index: [Math.floor(Math.random() * 12)]})
                     break;
                     case "synthwave":
-                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmjrvZ1gQYzBa9MB_B5TMMq', index: [Math.floor(Math.random() * 15)]})
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmjrvZ1gQYzBa9MB_B5TMMq', index: [Math.floor(Math.random() * 18)]})
+                    break;
+                    case "vaporTrap":
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nlUG5gOvlKe62yh2fWLgZkW', index: [Math.floor(Math.random() * 20)]})
+                    break;
+                    case "albums":
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nk7G5RlBJa3a-lONaFwH8-Y', index: [Math.floor(Math.random() * 11)]})
                     break;
                     default:
-                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nkA5xLFnrUEUbkCU_41Qkod', index: [Math.floor(Math.random() * 30)]})
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nkA5xLFnrUEUbkCU_41Qkod', index: [Math.floor(Math.random() * 45)]})
                 }
 
                 var self = this
