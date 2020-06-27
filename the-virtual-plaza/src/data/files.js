@@ -21,6 +21,16 @@ module.exports = [
         }
     },
     {
+        name: "Dead mall Sim",
+        app: "dead-mall",
+        icon: "deadmall",
+        options: {
+            singleton: true,
+            width:955,
+            height:600,
+        }
+    },
+    {
         name: "Gallery",
         app: "instagram",
         icon: "camera",
