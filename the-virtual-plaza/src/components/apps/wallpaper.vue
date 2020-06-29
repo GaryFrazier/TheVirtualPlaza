@@ -109,7 +109,7 @@
         name: 'WallpaperApp',
         data: function() {
             return {
-                selectedWallpaper: "https://media.giphy.com/media/j5zqQSABpeHCU8EpO3/giphy.gif",
+                selectedWallpaper: "https://media.giphy.com/media/yceDWMt6qiAiB4ZVqR/giphy.gif",
                 rotateWallpaper: true,
                 animatedWallpapers: require('../../data/wallpapers.js')
             }
@@ -157,7 +157,7 @@
                 if (wallpaper) {
                     self.selectedWallpaper = wallpaper;
                 } else {
-                    self.selectedWallpaper = "https://media.giphy.com/media/j5zqQSABpeHCU8EpO3/giphy.gif";
+                    self.selectedWallpaper = "https://media.giphy.com/media/yceDWMt6qiAiB4ZVqR/giphy.gif";
                 }
             }
         },

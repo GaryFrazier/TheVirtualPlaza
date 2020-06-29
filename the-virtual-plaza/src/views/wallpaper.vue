@@ -50,7 +50,7 @@
     module.exports = {
         data: function () {
             return {
-                wallpaper: storage.get('wallpaper') || "https://media.giphy.com/media/j5zqQSABpeHCU8EpO3/giphy.gif",
+                wallpaper: storage.get('wallpaper') || "https://media.giphy.com/media/yceDWMt6qiAiB4ZVqR/giphy.gif",
                 animatedWallpapers: require('../data/wallpapers.js'),
                 rotateWallpaper: storage.get('rotateWallpaper') || true,
             }
@@ -115,7 +115,7 @@
 
             var self = this
             setInterval(function() {
-                self.wallpaper = storage.get('wallpaper') || "https://media.giphy.com/media/j5zqQSABpeHCU8EpO3/giphy.gif";
+                self.wallpaper = storage.get('wallpaper') || "https://media.giphy.com/media/yceDWMt6qiAiB4ZVqR/giphy.gif";
             }, 1000)
             setInterval(function() {
                 var rotateWallpaperVar = storage.get('rotateWallpaper')
