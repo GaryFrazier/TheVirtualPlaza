@@ -1,7 +1,8 @@
 <template>
     <div id="linksContainer">
+        <a class="linkButton" target="_blank" href="https://blog.thevirtualplaza.com">Blog!</a>
         <a class="linkButton" target="_blank" href="https://www.redbubble.com/people/garyfrazier95/shop?asc=u">Merch!</a>
-        <a class="linkButton" target="_blank" href="https://discord.com/invite/A8BVVHF">Join Our Discord!</a>
+        <a class="linkButton" target="_blank" href="https://discord.com/invite/JPvPaSV">Join Our Discord!</a>
     </div>
 </template>
 

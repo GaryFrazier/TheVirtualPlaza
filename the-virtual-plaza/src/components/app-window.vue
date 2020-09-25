@@ -241,19 +241,25 @@
                 height:app.height+30+'px',
                 zIndex:app.zIndex
                 }"
-
+            @touchstart="appWindowMousedown(app,$event)"
             @mousedown="appWindowMousedown(app,$event)"
     >
         <header
                 class="app-title"
                 @mousedown.self="titleMousedown(app,$event)"
+                @touchstart.self="titleMousedown(app,$event)"
+                @touchend="mouseup()"
                 @mouseup="mouseup()"
         >
-            <div class="text-icon-holder"  @mousedown.self="titleMousedown(app,$event)" @mouseup="mouseup()">
-                <div class="icon {{app.icon}}"  @mousedown.self="titleMousedown(app,$event)" @mouseup="mouseup()">
+            <div class="text-icon-holder"  @mousedown.self="titleMousedown(app,$event)" @mouseup="mouseup()" @touchstart.self="titleMousedown(app,$event)" @touchend="mouseup()">
+                <div class="icon {{app.icon}}"  @mousedown.self="titleMousedown(app,$event)" @mouseup="mouseup()" @touchstart.self="titleMousedown(app,$event)" @touchend="mouseup()">
 
                 </div>
-                <span class="app-title-text" @mousedown.self="titleMousedown(app,$event)" @mouseup="mouseup()">{{app.title}}</span>
+                <span class="app-title-text" 
+                @mousedown.self="titleMousedown(app,$event)" 
+                @touchstart.self="titleMousedown(app,$event)"
+                @touchend="mouseup()" 
+                @mouseup="mouseup()">{{app.title}}</span>
             </div>
             <div class="app-control">
                 <span class="c c1" @mousedown="hideApp(app)"></span>
@@ -270,6 +276,7 @@
                 v-show="app.resizable"
                 class="resize-handle resize-handle-{{dir}}"
                 @mousedown="resizeHandler(dir,$event)"
+                @touchstart="resizeHandler(dir,$event)"
         ></div>
     </div>
 </template>

@@ -9,9 +9,10 @@
         <br />
         <h3>Social Media</h3>
         <br/>
-        <a href="https://www.instagram.com/neon_sunset_style/" target="_blank" rel="noopener noreferrer">Instagram</a><br/>
+        <a href="https://blog.thevirtualplaza.com" target="_blank" rel="noopener noreferrer">Blog</a><br/>
+        <a href="https://www.instagram.com/the_virtual_plaza/" target="_blank" rel="noopener noreferrer">Instagram</a><br/>
         <a href="https://www.facebook.com/NeonSunsetStyle" target="_blank" rel="noopener noreferrer">Facebook</a><br/>
-        <a href="https://discord.gg/A8BVVHF" target="_blank" rel="noopener noreferrer">Discord</a><br/>
+        <a href="https://discord.gg/JPvPaSV" target="_blank" rel="noopener noreferrer">Discord</a><br/>
         <a href="https://www.youtube.com/channel/UCAAd9A1tCGb8_bTWqQXr8oQ" target="_blank" rel="noopener noreferrer">Youtube</a><br/>
         <br />
 

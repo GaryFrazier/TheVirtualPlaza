@@ -1,7 +1,7 @@
 <template>
     <div id="chatContainer" class="chatContainer">
         <!--<div id="rt-e08c1cbc5b3d5c1d26b15d59db6d3860"></div> -->
-        <iframe class="chat-embed" src="https://titanembeds.com/embed/696015287253729372?css=128&defaultchannel=696015287887331380&scrollbartheme=light&theme=IceWyvern&userscalable=false" frameborder="0"></iframe>
+        <iframe class="chat-embed" src="https://titanembeds.com/embed/750870576469639239?css=128&defaultchannel=750870577052647447&scrollbartheme=light&theme=IceWyvern&userscalable=false" frameborder="0"></iframe>
 
     </div>
 </template>
@@ -33,15 +33,6 @@
 
         },
         ready: function () {
-            /*if (typeof RumbleTalkChat !== 'undefined') {
-                RumbleTalkChat.YrR0KjvL = undefined
-            }
-
-            let chatScript = document.createElement('script')
-            chatScript.setAttribute('async', 'true')
-            chatScript.setAttribute('src', 'https://rumbletalk.com/client/?YrR0KjvL')
-         
-            document.getElementById("chatContainer").appendChild(chatScript)*/
 
         }
     }
