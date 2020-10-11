@@ -314,6 +314,7 @@
         },
         methods: {
             appWindowMousedown:function (app,e) {
+                console.log(app)
                 if( !$(e.target).is('.app-control *') ){
                     app.show();
                 }
@@ -457,7 +458,6 @@
             }
 
             $w.on('mousemove',function (e) {
-
                 if(vm.drag){
                     onDrag(e);
                 }else if(vm.isResizing){
@@ -466,6 +466,16 @@
                 }
 
             }).on('mouseup',vm.mouseup);
+
+            $w.on('touchmove',function (e) {
+                if(vm.drag){
+                    onDrag(e);
+                }else if(vm.isResizing){
+                    onEasyResize(e);
+                    onDamnItResize(e);
+                }
+
+            }).on('touchend',vm.mouseup);
             
             vm.$watch(function () {
                 return vm.drag || vm.isResizing;

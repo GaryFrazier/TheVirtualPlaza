@@ -46,6 +46,9 @@
                         <label for="albums"><input type="radio" v-model="selectedPlaylist" id="albums" value="albums">Albums / Mixes</label>
                     </div>
                     <div class="playlistButton">
+                        <label for="3DRenders"><input type="radio" v-model="selectedPlaylist" id="3DRenders" value="3DRenders">3D Renders</label>
+                    </div>
+                    <div class="playlistButton">
                         <label for="void"><input type="radio" v-model="selectedPlaylist" id="void" value="void">T H E ~ V O I D</label>
                 </div>
             </div>
@@ -145,6 +148,9 @@
                     break;
                     case "albums":
                     window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nk7G5RlBJa3a-lONaFwH8-Y', index: [Math.floor(Math.random() * 11)]})
+                    break;
+                    case "3DRenders":
+                    window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nkASBhqRbR5CH4x-kzGyTso', index: [Math.floor(Math.random() * 4)]})
                     break;
                     default:
                     window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nkA5xLFnrUEUbkCU_41Qkod', index: [Math.floor(Math.random() * 45)]})
