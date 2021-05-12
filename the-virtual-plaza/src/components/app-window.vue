@@ -314,7 +314,6 @@
         },
         methods: {
             appWindowMousedown:function (app,e) {
-                console.log(app)
                 if( !$(e.target).is('.app-control *') ){
                     app.show();
                 }

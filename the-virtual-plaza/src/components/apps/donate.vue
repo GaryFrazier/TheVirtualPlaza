@@ -2,8 +2,7 @@
     <div id="donateContainer">
         <h3>Like the site? Consider helping with server costs!</h3>
         <br/>
-        <a href="https://www.paypal.me/thegrep" target="_blank" rel="noopener noreferrer">Donate</a><br/>
-        <a href="https://www.patreon.com/NeonSunsetStyle" target="_blank" rel="noopener noreferrer">Patreon</a><br/>
+        <a href="https://www.paypal.me/freewillfirebox" target="_blank" rel="noopener noreferrer">Donate</a><br/>
         <br />
     </div>
 </template>

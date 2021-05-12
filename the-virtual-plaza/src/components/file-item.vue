@@ -114,6 +114,13 @@
                 }, 1000)
                 
             }
+
+            if (this.file.app === 'chat-app') {
+                setTimeout(() => {
+                    this.file.open()
+                }, 1200)
+                
+            }
         }
     }
 </script>
