@@ -63,7 +63,7 @@ module.exports = [
         }
     },
     {
-        name: "Follow Us",
+        name: "About Us",
         app: "about",
         icon: "about",
         options: {

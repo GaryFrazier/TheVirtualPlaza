@@ -1,8 +1,7 @@
 <template>
     <div id="linksContainer">
-        <a class="linkButton" target="_blank" href="https://www.youtube.com/channel/UCMIvZ1DlYgl6lNl4nEHAQww">Gaming Youtube!</a>
-        <a class="linkButton" target="_blank" href="https://blog.thevirtualplaza.com">Blog!</a>
-        <a class="linkButton" target="_blank" href="https://discord.com/invite/KknSfaeVXN">Join Our Gaming Discord!</a>
+        <a class="linkButton" target="_blank" href="https://www.redbubble.com/people/garyfrazier95/explore?asc=u&page=1&sortOrder=top%20selling">Shop!</a>
+        <a class="linkButton" target="_blank" href="https://discord.gg/T3YZnYnK8y">Discord!</a>
     </div>
 </template>
 
