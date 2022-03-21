@@ -11,7 +11,7 @@
         <br/>
         <a href="https://www.instagram.com/the_virtual_plaza/" target="_blank" rel="noopener noreferrer">Instagram</a><br/>
         <a href="https://www.facebook.com/NeonSunsetStyle" target="_blank" rel="noopener noreferrer">Facebook</a><br/>
-        <a href="https://discord.gg/T3YZnYnK8y" target="_blank" rel="noopener noreferrer">Discord</a><br/>
+        <a href="https://discord.gg/XdZzMVzTdC" target="_blank" rel="noopener noreferrer">Discord</a><br/>
         <a href="https://www.youtube.com/channel/UCAAd9A1tCGb8_bTWqQXr8oQ" target="_blank" rel="noopener noreferrer">Youtube</a><br/>
         <br />
 
