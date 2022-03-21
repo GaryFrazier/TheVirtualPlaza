@@ -7,30 +7,10 @@
         pointer-events: none;
     }
 
-    //.wallpaperImg {
-        //min-width: 1200px;
-    //}
-
-    .giphyLink {
-            position: fixed;
-            z-index: 999;
-            right: 0;
-            color: white;
-            margin-right: 20px;
-            pointer-events: all;
-    }
-
-    .giphyLink a {
-        color: white;
-        text-decoration: none;
-        font-size: 12px;
-    }
 </style>
 <template>
-    <div class="wallpaper-section">
-        <p v-if="getImgUrl.indexOf('.gif') !== -1" class="giphyLink"><a target="_blank" :href="'https://giphy.com/gifs/' + getGifId">via GIPHY</a></p>
+    <div class="wallpaper-section" :style="backgroundStyles(getImgUrl)">
         <img
-                :src="getImgUrl"
                 class="wallpaper-section wallpaperImg"
                 @click="emit('click:wallpaper',$event);"
                 @drop="drop($event);"
@@ -50,9 +30,7 @@
     module.exports = {
         data: function () {
             return {
-                wallpaper: storage.get('wallpaper') || "https://media.giphy.com/media/yceDWMt6qiAiB4ZVqR/giphy.gif",
-                animatedWallpapers: require('../data/wallpapers.js'),
-                rotateWallpaper: storage.get('rotateWallpaper') || true,
+                wallpaper: storage.get('wallpaper') || "solid.jpg",
             }
         },
         methods: {
@@ -73,6 +51,19 @@
                     $event.emit('contextmenu:wallpaper',{x:e.clientX,y:e.clientY})
                 }else if(e.button==0){
                     $event.emit('mousedown:wallpaper',{x:e.clientX,y:e.clientY})
+                }
+            },
+            backgroundStyles(getImgUrl) {
+                if (getImgUrl.indexOf('r-') !== -1) {
+                    return {
+                        'background-image': `url(${getImgUrl})`,
+                        'background-repeat': 'repeat',
+                    }
+                }
+                
+                return {
+                    'background-image': `url(${getImgUrl})`,
+                    'background-size': 'cover',
                 }
             },
             rotateWallpaperFunc: function() {
@@ -115,16 +106,7 @@
 
             var self = this
             setInterval(function() {
-                self.wallpaper = storage.get('wallpaper') || "https://media.giphy.com/media/yceDWMt6qiAiB4ZVqR/giphy.gif";
-            }, 1000)
-            setInterval(function() {
-                var rotateWallpaperVar = storage.get('rotateWallpaper')
-                if (rotateWallpaperVar === false) {
-                    self.rotateWallpaper = false
-                } else {
-                    self.rotateWallpaper = true
-                }
-                
+                self.wallpaper = storage.get('wallpaper') || "solid.jpg";
             }, 1000)
             setInterval(function() {
                 self.rotateWallpaperFunc()

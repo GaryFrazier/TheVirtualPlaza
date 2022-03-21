@@ -115,7 +115,7 @@ var originStorage = (function(){
     }
 })();
 
-module.exports = {     // 可以存对象，不限于字符串。
+module.exports = {
     get:function(k){
         var a = originStorage.get(k);
         var _return;

@@ -31,17 +31,6 @@ module.exports = [
         }
     },
     {
-        name: "Watch Party",
-        app: "watch-room",
-        icon: "watchParty",
-        options: {
-            singleton: true,
-            width:600,
-            height:800,
-        }
-    },
-
-    {
         name: "Paint",
         app: "paint",
         icon: "paint",
