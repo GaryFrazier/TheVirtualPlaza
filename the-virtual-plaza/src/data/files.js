@@ -71,14 +71,6 @@ module.exports = [
         }
     },
     {
-        name: "Share",
-        app: "share",
-        icon: "share",
-        options: {
-            singleton: true,
-        }
-    },
-    {
         name: "Support Us",
         app: "donate",
         icon: "donate",
