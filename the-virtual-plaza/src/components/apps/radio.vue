@@ -1,7 +1,7 @@
 <template>
-    <div id="playerContainer">
+    <div id="radioContainer">
         <div class="iFrameContainer">
-            <div id="playlistIFrame"></div>
+            <div id="radioIFrame"></div>
         </div>
         <div class="controlContainer">
             <button class="flex-button" @click="playPrevious"> 
@@ -15,9 +15,9 @@
             <button class="flex-button" @click="playNext"> 
                 <i class="material-icons">skip_next</i>
             </button>
-            <!--<button class="flex-button" @click="togglePlaylistMenu"> 
+            <button class="flex-button" @click="togglePlaylistMenu"> 
                 <i class="material-icons">playlist_play</i>
-            </button>-->
+            </button>
             
             <div class="playlistMenuContainer">
                 <div
@@ -40,16 +40,8 @@
                         <label for="synthwave"><input type="radio" v-model="selectedPlaylist" id="synthwave" value="synthwave">Neon Highway</label>
                     </div>
                     <div class="playlistButton">
-                        <label for="vaporTrap"><input type="radio" v-model="selectedPlaylist" id="vaporTrap" value="vaporTrap">Vapor Trap</label>
+                        <label for="barber"><input type="radio" v-model="selectedPlaylist" id="barber" value="barber">Barber Beats</label>
                     </div>
-                    <div class="playlistButton">
-                        <label for="albums"><input type="radio" v-model="selectedPlaylist" id="albums" value="albums">Albums / Mixes</label>
-                    </div>
-                    <div class="playlistButton">
-                        <label for="3DRenders"><input type="radio" v-model="selectedPlaylist" id="3DRenders" value="3DRenders">3D Renders</label>
-                    </div>
-                    <div class="playlistButton">
-                        <label for="void"><input type="radio" v-model="selectedPlaylist" id="void" value="void">T H E ~ V O I D</label>
                 </div>
             </div>
         </div>
@@ -62,7 +54,7 @@
      display: flex;
  }
 
- #playlistIFrame {
+ #radioIFrame {
      width: 100%;
      height: 100%;
  }
@@ -73,7 +65,7 @@
     display: flex;
  }
 
- #playerContainer {
+ #radioContainer {
      height: 100%;
      display: flex;
      flex-direction: column;
@@ -89,9 +81,9 @@
      position: absolute;
      display: flex;
      flex-direction: column;
-     height: 200px;
+     height: 160px;
      width: 200px;
-     top: -200px;
+     top: -160px;
      box-shadow: 0 0 5px;
      left: -200px;
      background-color: white;
@@ -128,44 +120,34 @@
         },
         watch: {
             selectedPlaylist: function (val) {
-                if ( window.ytPlayer && window.ytPlayer.getVideoData ) {
-
-                    //todo clean up options
-                    switch(val) {
-                        case "mallsoft":
-                        window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nl_5CvSyoFpaDji7S0Ao1AJ', index: [Math.floor(Math.random() * 30)]})
-                        break;
-                        case "futureFunk":
-                        window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmeE0xzgb9FV187sYr8-SKo', index: [Math.floor(Math.random() * 29)]})
-                        break;
-                        case "void":
-                        window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmh2_sqnojj7osnkfszZCBb', index: [Math.floor(Math.random() * 12)]})
-                        break;
-                        case "synthwave":
-                        window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmjrvZ1gQYzBa9MB_B5TMMq', index: [Math.floor(Math.random() * 18)]})
-                        break;
-                        case "vaporTrap":
-                        window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nlUG5gOvlKe62yh2fWLgZkW', index: [Math.floor(Math.random() * 20)]})
-                        break;
-                        case "albums":
-                        window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nk7G5RlBJa3a-lONaFwH8-Y', index: [Math.floor(Math.random() * 11)]})
-                        break;
-                        case "3DRenders":
-                        window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nkASBhqRbR5CH4x-kzGyTso', index: [Math.floor(Math.random() * 4)]})
-                        break;
-                        default:
-                        window.ytPlayer.cuePlaylist({listType:'playlist', list:'PLEe9fYs-_7nmGtegPooDvlHVa4UMZBDxd', index: [Math.floor(Math.random() * 42)]})
-                    }
+                if ( window.ytRadio && window.ytRadio.getVideoData ) {
+                    window.ytRadio.cuePlaylist();
 
                     var self = this
                     setTimeout( function() { 
-                        window.ytPlayer.setShuffle(true); 
-                        window.ytPlayer.playVideo();
-                        window.ytPlayer.seekTo(0);
-                        window.ytPlayer.setLoop(true);
+                        //todo clean up options
+                        switch(val) {
+                            case "mallsoft":
+                            window.ytRadio.loadPlaylist({listType:'playlist', list:'PLEe9fYs-_7nl_5CvSyoFpaDji7S0Ao1AJ', index: [Math.floor(Math.random() * 32)]})
+                            break;
+                            case "futureFunk":
+                            window.ytRadio.loadPlaylist({listType:'playlist', list:'PLEe9fYs-_7nmeE0xzgb9FV187sYr8-SKo', index: [Math.floor(Math.random() * 32)]})
+                            break;
+                            case "barber":
+                            window.ytRadio.loadPlaylist({listType:'playlist', list:'PLEe9fYs-_7nlK81rI1hWHm3tQf3hiGyRM', index: [Math.floor(Math.random() * 16)]})
+                            break;
+                            case "synthwave":
+                            window.ytRadio.loadPlaylist({listType:'playlist', list:'PLEe9fYs-_7nmjrvZ1gQYzBa9MB_B5TMMq', index: [Math.floor(Math.random() * 24)]})
+                            break;
+                            default:
+                            window.ytRadio.loadPlaylist({listType:'playlist', list:'PLEe9fYs-_7nkA5xLFnrUEUbkCU_41Qkod', index: [Math.floor(Math.random() * 49)]})
+                        }
+                        window.ytRadio.setShuffle(true); 
+                        window.ytRadio.setLoop(true);
                         self.playerIsPlaying = true;
                         self.playlistMenu = false;
-                    }, 1000);
+                    }, 500);
+                
                 }
             }
         },
@@ -174,29 +156,29 @@
                 this.playerExpanded = !this.playerExpanded;
             },
             playNext: function() {
-                if (!window.ytPlayer || !window.ytPlayer.nextVideo) {
+                if (!window.ytRadio || !window.ytRadio.nextVideo) {
                 return
                 }
 
-                window.ytPlayer.nextVideo();
+                window.ytRadio.nextVideo();
             },
             playPrevious: function() {
-                if (!window.ytPlayer || !window.ytPlayer.previousVideo) {
+                if (!window.ytRadio || !window.ytRadio.previousVideo) {
                 return
                 }
 
-                window.ytPlayer.previousVideo();
+                window.ytRadio.previousVideo();
             },
             togglePlay: function() {
-                if (!window.ytPlayer || !window.ytPlayer.pauseVideo) {
+                if (!window.ytRadio || !window.ytRadio.pauseVideo) {
                 return
                 }
 
                 if (this.playerIsPlaying) {
-                window.ytPlayer.pauseVideo();
+                window.ytRadio.pauseVideo();
                 this.playerIsPlaying = false;
                 } else {
-                window.ytPlayer.playVideo();
+                window.ytRadio.playVideo();
                 this.playerIsPlaying = true;
                 }
             },
@@ -209,17 +191,17 @@
                 return this.playerExpanded;
             },
             isPlayerPlaying: function() {
-                return (!window.ytPlayer ? false : window.ytPlayer.getPlayerState() === 1) || this.playerIsPlaying
+                return (!window.ytRadio ? false : window.ytRadio.getPlayerState() === 1) || this.playerIsPlaying
             }
         },
         ready: function () {
             var numPl = Math.floor((Math.random() * 12) + 1);
-            var ytPlayer = new YT.Player("playlistIFrame", {
+            var ytRadio = new YT.Player("radioIFrame", {
                 height: '200',
                 width: '350',
                 playerVars: {
                     listType:'playlist',
-                    list:'PLEe9fYs-_7nmGtegPooDvlHVa4UMZBDxd',
+                    list:'PLEe9fYs-_7nkA5xLFnrUEUbkCU_41Qkod',
                     index: numPl,
                     autoplay: 1,
                     loop: 1,
@@ -227,11 +209,11 @@
                     start: 0,
                     playsinline: 1,
                     disablekb: 1,
-                    modestbranding: 1
+                    modestbranding: 1,
                 },
                 events: {
                     'onReady': function (event) {
-                        event.target.mute();
+                        event.target.setVolume(50);
                         setTimeout(function() {
                             event.target.setShuffle({'shufflePlaylist' : true});
                         }, 1000);
@@ -239,17 +221,17 @@
                 }
             });
 
-            window.ytPlayer = ytPlayer;
+            window.ytRadio = ytRadio;
 
             var self = this;
 
             setInterval( function() {
                 // Check if player is initialized and the video is loaded
-                if ( window.ytPlayer && window.ytPlayer.getVideoData ) {
+                if ( window.ytRadio && window.ytRadio.getVideoData ) {
                     // States: 1: playing, 2: paused, 5: stopped
-                    if ( [ 1, 2, 5 ].indexOf( window.ytPlayer.getPlayerState() ) >= 0 ) {
+                    if ( [ 1, 2, 5 ].indexOf( window.ytRadio.getPlayerState() ) >= 0 ) {
                         // Set the innerText of div with id="title" to player title
-                        self.videoTitle = window.ytPlayer.getVideoData().title;
+                        self.videoTitle = window.ytRadio.getVideoData().title;
                     }
                 }
             }, 100 );

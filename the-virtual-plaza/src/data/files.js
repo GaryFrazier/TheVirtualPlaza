@@ -1,8 +1,16 @@
 module.exports = [
     {
         name: "Sunset Radio",
-        app: "playlist-player",
+        app: "radio",
         icon: "radio",
+        options: {
+            singleton: true
+        }
+    },
+    {
+        name: "Nostalgia Tube",
+        app: "playlist-player",
+        icon: "watchParty",
         options: {
             singleton: true
         }

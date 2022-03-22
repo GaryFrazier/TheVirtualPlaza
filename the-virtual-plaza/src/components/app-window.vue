@@ -375,7 +375,7 @@
             var vm = this;
             var $w = $(window);
             var app = vm.app;
-
+            app.top = app.top - 20;
             function isset(n){
                 return typeof n !=='undefined';
             }
