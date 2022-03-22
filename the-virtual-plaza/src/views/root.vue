@@ -154,12 +154,15 @@
         right: 0;
         background: linear-gradient(rgba(18, 16, 16, 0.15) 90%, rgba(0, 0, 0, 0.35) 90%), linear-gradient(90deg, rgba(255, 0, 0, 0.36), rgba(0, 255, 0, 0.32), rgba(0, 0, 255, 0.36));
         z-index: 1000;
-        opacity: 0.5;
-        background-size: 100% 2px, 3px 100%;
+        opacity: 0.2;
+        background-size: 100% 3px, 4px 100%;
         pointer-events: none;
         }
         .crt {
         animation: textShadow 1.6s infinite;
+        }
+        * {
+            letter-spacing: 2px;
         }
 </style>
 <template>
