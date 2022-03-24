@@ -25,7 +25,7 @@ module.exports = [
             },
             singleton: true,
             width:400,
-            height:600,
+            height:500,
         }
     },
     {

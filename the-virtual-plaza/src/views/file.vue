@@ -30,7 +30,7 @@
             width:100
         }
     };
-    var maxRow = Math.floor(window._h/option.cell.height);
+    var maxRow = Math.floor(window._h/(option.cell.height * 1.05));
 
     function getParsedXY(x,y,origin){
         x=x-option.cell.width/2;
